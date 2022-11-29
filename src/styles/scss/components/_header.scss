@@ -1,0 +1,25 @@
+header {
+  padding: $md-spacing;
+  @include flex-center-vert;
+  justify-content: space-between;
+
+  h1 {
+    font-family: $header-font-style;
+    font-size: 2rem;
+    letter-spacing: 0.395em;
+  }
+
+  .basket-container {
+    @include flex-center-vert;
+
+    button {
+      border: none;
+      background: none;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+  }
+}
