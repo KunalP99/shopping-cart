@@ -2,13 +2,14 @@
   @include flex-center-horiz;
   flex-wrap: wrap;
   gap: $l-spacing;
-  margin: $md-spacing;
+  padding: $md-spacing;
+  margin-top: $l-spacing;
 
   .card {
-    width: 140px;
+    width: clamp(140px, 40%, 400px);
 
     img {
-      width: 140px;
+      width: 100%;
     }
 
     p {
