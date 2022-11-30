@@ -17,6 +17,13 @@
 
     .name {
       margin-top: $xs-spacing;
+
+      // Adds an ellipsis if the name goes over the second line
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .price {
