@@ -1,0 +1,37 @@
+.shop-container {
+  @include flex-center-horiz;
+  flex-wrap: wrap;
+  gap: $l-spacing;
+  margin: $md-spacing;
+
+  .card {
+    width: 140px;
+
+    img {
+      width: 140px;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    .name {
+      margin-top: $xs-spacing;
+    }
+
+    .price {
+      margin-top: $s-spacing;
+      margin-bottom: $xs-spacing;
+      font-weight: 600;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 0px;
+      border-radius: 16px;
+      width: 100%;
+    }
+  }
+}

@@ -160,4 +160,37 @@ header .basket-container button {
 header .basket-container p {
   font-size: 1.25rem;
   font-weight: 400;
+}
+
+.shop-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 20px;
+}
+.shop-container .card {
+  width: 140px;
+}
+.shop-container .card img {
+  width: 140px;
+}
+.shop-container .card p {
+  font-size: 0.875rem;
+}
+.shop-container .card .name {
+  margin-top: 8px;
+}
+.shop-container .card .price {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.shop-container .card button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 16px;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

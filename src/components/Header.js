@@ -8,8 +8,9 @@ export default function Header() {
         <button>
           <img src={Basket} alt='Basket' />
         </button>
-        <p>x2</p>
+        <p>x0</p>
       </div>
+      {/* Add Sidebar Here */}
     </header>
   );
 }
