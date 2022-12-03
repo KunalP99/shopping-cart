@@ -1,0 +1,30 @@
+.sidebar-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.92) 100%);
+  height: 100%;
+  width: 60%;
+  padding: $l-spacing;
+  transform: translateX(100%);
+  transition: transform 700ms ease-in-out;
+
+  h2 {
+    font-family: $header-font-style;
+    color: white;
+    letter-spacing: 0.395em;
+    font-size: 1.563rem;
+  }
+
+  .close-icon {
+    float: right;
+  }
+
+  .checkout-container {
+    margin-top: $l-spacing;
+  }
+}
+
+.show {
+  transform: translateX(0%);
+}

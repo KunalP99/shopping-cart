@@ -1,22 +1,23 @@
 import Header from "./Header";
 import items from "../data/items";
-import Card from "./Card";
 
 export default function Shop() {
-  console.log(items);
   return (
     <div>
       <Header />
+
       <div className='shop-container'>
         {items.map((item) => {
           return (
-            <Card
-              key={item.id}
-              coverImg={require(`../images/items/item-${item.id}.png`)}
-              name={item.name}
-              price={item.price}
-              class={item.class}
-            />
+            <div className='card'>
+              <img
+                src={require(`../images/items/item-${item.id}.png`)}
+                alt={item.name}
+              />
+              <p className='name'>{item.name}</p>
+              <p className='price'>{`£${item.price}`}</p>
+              <button>Add to basket</button>
+            </div>
           );
         })}
       </div>
