@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Bebas+Neue&display=swap");
 html,
 body,
 div,
@@ -219,6 +219,7 @@ header .basket-container p {
   font-size: 1.563rem;
 }
 .sidebar-container .close-icon {
+  cursor: pointer;
   float: right;
 }
 .sidebar-container .checkout-container {
@@ -226,6 +227,31 @@ header .basket-container p {
 }
 .sidebar-container .checkout-container p {
   color: white;
+}
+.sidebar-container .checkout-container .checkout-item {
+  margin-top: 32px;
+}
+.sidebar-container .name-price-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.sidebar-container .quantity-remove-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-container .quantity-remove-container .quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+}
+.sidebar-container .quantity-remove-container button {
+  color: red;
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
 }
 
 .show {

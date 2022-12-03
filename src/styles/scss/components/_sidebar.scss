@@ -17,6 +17,7 @@
   }
 
   .close-icon {
+    cursor: pointer;
     float: right;
   }
 
@@ -25,6 +26,35 @@
 
     p {
       color: white;
+    }
+
+    .checkout-item {
+      margin-top: $l-spacing;
+    }
+  }
+
+  .name-price-container {
+    display: flex;
+    justify-content: space-between;
+    gap: $l-spacing;
+  }
+
+  .quantity-remove-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .quantity-container {
+      @include flex-center-vert;
+      gap: 5px;
+      margin-top: $s-spacing;
+    }
+
+    button {
+      color: red;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
     }
   }
 }
