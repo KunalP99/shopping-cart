@@ -224,6 +224,9 @@ header .basket-container p {
 .sidebar-container .checkout-container {
   margin-top: 32px;
 }
+.sidebar-container .checkout-container p {
+  color: white;
+}
 
 .show {
   transform: translateX(0%);
