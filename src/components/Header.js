@@ -14,7 +14,11 @@ export default function Header(props) {
         <button>
           <img onClick={showSidebar} src={Basket} alt='Basket' />
         </button>
-        <p>{props.basket.length === 0 ? "x0" : `x${props.basket.length}`}</p>
+        <p>
+          {typeof props.basket !== "undefined"
+            ? `x${props.basket.length}`
+            : "x0"}
+        </p>
       </div>
       <Sidebar basket={props.basket} />
     </header>
