@@ -231,6 +231,9 @@ header .basket-container p {
 .sidebar-container .checkout-container .checkout-item {
   margin-top: 32px;
 }
+.sidebar-container .checkout-container .total {
+  margin-top: 32px;
+}
 .sidebar-container .name-price-container {
   display: flex;
   justify-content: space-between;

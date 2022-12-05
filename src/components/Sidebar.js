@@ -34,7 +34,7 @@ export default function Sidebar(props) {
                 <div className='quantity-remove-container'>
                   <div className='quantity-container'>
                     <img src={Minus} alt='Minus quantity' />
-                    <p>1</p>
+                    <p>{item.quantity}</p>
                     <img src={Plus} alt='Add quantity' />
                   </div>
                   <button>Remove</button>
@@ -42,6 +42,7 @@ export default function Sidebar(props) {
               </div>
             );
           })}
+        <p className='total'>Sub-total: £</p>
       </div>
     </div>
   );
