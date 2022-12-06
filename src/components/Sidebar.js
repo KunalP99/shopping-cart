@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-
 import Close from "../images/close.svg";
 import Minus from "../images/minus.svg";
 import Plus from "../images/plus.svg";
 
 export default function Sidebar(props) {
   const [total, setTotal] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const closeSidebar = () => {
     const sidebar = document.querySelector(".sidebar-container");
@@ -45,8 +45,11 @@ export default function Sidebar(props) {
   // Remove item from basket array
   const removeItem = (item) => {
     const index = props.basket.indexOf(item);
+    let newBasket = [];
+
     if (index > -1) {
       props.basket.splice(index, 1);
+      setIsLoading(true);
     }
   };
 
@@ -61,6 +64,10 @@ export default function Sidebar(props) {
           }, 0)
         );
       });
+      if (isLoading)
+        setInterval(() => {
+          setIsLoading(false);
+        }, 100);
     }
   }, [props.basket]);
 
@@ -106,7 +113,7 @@ export default function Sidebar(props) {
               </div>
             );
           })}
-        <p className='total'>{`Sub-total: £${total} `}</p>
+        <p className='total'>{`Sub-total: £${total}`}</p>
       </div>
     </div>
   );
