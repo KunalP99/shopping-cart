@@ -1,12 +1,28 @@
+import { useState, useEffect } from "react";
+
 import Close from "../images/close.svg";
 import Minus from "../images/minus.svg";
 import Plus from "../images/plus.svg";
 
 export default function Sidebar(props) {
+  const [total, setTotal] = useState([]);
+
   const closeSidebar = () => {
     const sidebar = document.querySelector(".sidebar-container");
     sidebar.classList.remove("show");
   };
+
+  useEffect(() => {
+    // Gets the total of all items in the basket (arr is the current array)
+    props.basket.map((item, index, arr) => {
+      setTotal(
+        // Adds the previous value to the total of the price multiplied by the quantity and every time the basket updates, a new total will be calculated
+        arr.reduce((accum, curr) => {
+          return accum + curr.price * curr.quantity;
+        }, 0)
+      );
+    });
+  }, [props.basket]);
 
   return (
     <div className='sidebar-container'>
@@ -42,7 +58,7 @@ export default function Sidebar(props) {
               </div>
             );
           })}
-        <p className='total'>Sub-total: £</p>
+        <p>{`Sub-total: £${total} `}</p>
       </div>
     </div>
   );
