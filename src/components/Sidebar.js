@@ -12,16 +12,49 @@ export default function Sidebar(props) {
     sidebar.classList.remove("show");
   };
 
+  const addQuantity = (item) => {
+    props.setBasket(
+      [...props.basket].map((object) => {
+        if (object.id === item.id) {
+          return {
+            ...object,
+            quantity: object.quantity + 1,
+          };
+        } else {
+          return object;
+        }
+      })
+    );
+  };
+
+  const minusQuantity = (item) => {
+    props.setBasket(
+      [...props.basket].map((object) => {
+        if (object.id === item.id && object.quantity > 1) {
+          return {
+            ...object,
+            quantity: object.quantity - 1,
+          };
+        } else {
+          return object;
+        }
+      })
+    );
+  };
+
   useEffect(() => {
-    // Gets the total of all items in the basket (arr is the current array)
-    props.basket.map((item, index, arr) => {
-      setTotal(
-        // Adds the previous value to the total of the price multiplied by the quantity and every time the basket updates, a new total will be calculated
-        arr.reduce((accum, curr) => {
-          return accum + curr.price * curr.quantity;
-        }, 0)
-      );
-    });
+    if (typeof props.basket !== "undefined") {
+      // Gets the total of all items in the basket (arr is the current array)
+      props.basket.map((item, index, arr) => {
+        setTotal(
+          // Adds the previous value to the total of the price multiplied by the quantity and every time the basket updates, a new total will be calculated
+          arr.reduce((accum, curr) => {
+            return accum + curr.price * curr.quantity;
+          }, 0)
+        );
+        return;
+      });
+    }
   }, [props.basket]);
 
   return (
@@ -49,16 +82,24 @@ export default function Sidebar(props) {
                 </div>
                 <div className='quantity-remove-container'>
                   <div className='quantity-container'>
-                    <img src={Minus} alt='Minus quantity' />
+                    <img
+                      onClick={() => minusQuantity(item)}
+                      src={Minus}
+                      alt='Minus quantity'
+                    />
                     <p>{item.quantity}</p>
-                    <img src={Plus} alt='Add quantity' />
+                    <img
+                      onClick={() => addQuantity(item)}
+                      src={Plus}
+                      alt='Add quantity'
+                    />
                   </div>
                   <button>Remove</button>
                 </div>
               </div>
             );
           })}
-        <p>{`Sub-total: £${total} `}</p>
+        <p className='total'>{`Sub-total: £${total} `}</p>
       </div>
     </div>
   );

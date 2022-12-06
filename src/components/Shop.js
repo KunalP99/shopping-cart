@@ -7,7 +7,7 @@ export default function Shop() {
 
   return (
     <div>
-      <Header basket={basket} />
+      <Header basket={basket} setBasket={setBasket} />
       <div className='shop-container'>
         {items.map((item) => {
           return (

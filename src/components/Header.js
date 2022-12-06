@@ -20,7 +20,7 @@ export default function Header(props) {
             : "x0"}
         </p>
       </div>
-      <Sidebar basket={props.basket} />
+      <Sidebar basket={props.basket} setBasket={props.setBasket} />
     </header>
   );
 }
