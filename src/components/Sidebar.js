@@ -45,6 +45,7 @@ export default function Sidebar(props) {
   const removeItem = (item) => {
     const index = props.basket.indexOf(item);
 
+    // Only splice if the index does exist
     if (index > -1) {
       props.basket.splice(index, 1);
       props.setBasket([...props.basket]);
@@ -108,7 +109,7 @@ export default function Sidebar(props) {
             );
           })}
         <p className='total'>
-          {props.basket.length < 1
+          {typeof props.basket !== "undefined" && props.basket.length < 1
             ? `Sub-total: £${0}`
             : `Sub-total: £${total}`}
         </p>
