@@ -5,7 +5,7 @@ import Minus from "../images/minus.svg";
 import Plus from "../images/plus.svg";
 
 export default function Sidebar(props) {
-  const [total, setTotal] = useState([]);
+  const [total, setTotal] = useState(0);
 
   const closeSidebar = () => {
     const sidebar = document.querySelector(".sidebar-container");
@@ -42,6 +42,14 @@ export default function Sidebar(props) {
     );
   };
 
+  // Remove item from basket array
+  const removeItem = (item) => {
+    const index = props.basket.indexOf(item);
+    if (index > -1) {
+      props.basket.splice(index, 1);
+    }
+  };
+
   useEffect(() => {
     if (typeof props.basket !== "undefined") {
       // Gets the total of all items in the basket (arr is the current array)
@@ -52,7 +60,6 @@ export default function Sidebar(props) {
             return accum + curr.price * curr.quantity;
           }, 0)
         );
-        return;
       });
     }
   }, [props.basket]);
@@ -94,7 +101,7 @@ export default function Sidebar(props) {
                       alt='Add quantity'
                     />
                   </div>
-                  <button>Remove</button>
+                  <button onClick={() => removeItem(item)}>Remove</button>
                 </div>
               </div>
             );
