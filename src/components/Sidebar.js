@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Close from "../images/close.svg";
 import Minus from "../images/minus.svg";
 import Plus from "../images/plus.svg";
+import { Link } from "react-router-dom";
 
 export default function Sidebar(props) {
   const [total, setTotal] = useState(0);
@@ -58,6 +59,8 @@ export default function Sidebar(props) {
       }
     }
   };
+
+  const orderBtnClick = () => {};
 
   useEffect(() => {
     if (typeof props.basket !== "undefined") {
@@ -122,7 +125,11 @@ export default function Sidebar(props) {
         </p>
       </div>
       {props.basket.length > 0 && (
-        <button className='buy-now-btn'>Buy Now</button>
+        <button className='buy-now-btn'>
+          <Link to='/order' className='order-link'>
+            Shop Now
+          </Link>
+        </button>
       )}
     </div>
   );

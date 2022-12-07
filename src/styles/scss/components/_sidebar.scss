@@ -72,8 +72,13 @@
     padding: $xxs-spacing $xl-spacing;
     margin-top: $l-spacing;
     border-radius: 16px;
-    transition: 300ms ease-in-out;
     font-weight: 600;
+    transition: 300ms ease-in-out;
+
+    .order-link {
+      text-decoration: none;
+      color: black;
+    }
   }
   .buy-now-btn:hover {
     background-color: rgb(168, 168, 168);

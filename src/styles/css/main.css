@@ -281,8 +281,12 @@ header .basket-container p {
   padding: 4px 52px;
   margin-top: 32px;
   border-radius: 16px;
-  transition: 300ms ease-in-out;
   font-weight: 600;
+  transition: 300ms ease-in-out;
+}
+.sidebar-container .buy-now-btn .order-link {
+  text-decoration: none;
+  color: black;
 }
 .sidebar-container .buy-now-btn:hover {
   background-color: rgb(168, 168, 168);
