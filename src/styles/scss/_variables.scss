@@ -29,3 +29,14 @@ $xxl-spacing: 84px;
   display: flex;
   align-items: center;
 }
+
+@mixin header-style {
+  font-family: $header-font-style;
+  font-size: 2rem;
+  letter-spacing: 0.395em;
+}
+
+@mixin link-style {
+  text-decoration: none;
+  color: black;
+}

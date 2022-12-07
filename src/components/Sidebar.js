@@ -60,7 +60,10 @@ export default function Sidebar(props) {
     }
   };
 
-  const orderBtnClick = () => {};
+  const orderBtnClick = () => {
+    // Empties basket when Buy Now button is clicked
+    localStorage.setItem("HOODIE_BASKET", JSON.stringify([]));
+  };
 
   useEffect(() => {
     if (typeof props.basket !== "undefined") {
@@ -125,11 +128,11 @@ export default function Sidebar(props) {
         </p>
       </div>
       {props.basket.length > 0 && (
-        <button className='buy-now-btn'>
-          <Link to='/order' className='order-link'>
-            Shop Now
-          </Link>
-        </button>
+        <Link to='/order' className='order-link'>
+          <button onClick={orderBtnClick} className='buy-now-btn'>
+            Buy Now
+          </button>
+        </Link>
       )}
     </div>
   );

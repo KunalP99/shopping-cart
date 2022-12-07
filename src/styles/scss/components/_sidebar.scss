@@ -6,14 +6,14 @@
   height: 100%;
   width: 60%;
   padding: $l-spacing;
+  overflow-y: auto;
+
   transform: translateX(100%);
   transition: transform 700ms ease-in-out;
 
   h2 {
-    font-family: $header-font-style;
+    @include header-style;
     color: white;
-    letter-spacing: 0.395em;
-    font-size: 1.563rem;
   }
 
   .close-icon {
@@ -23,13 +23,14 @@
 
   .checkout-container {
     margin-top: $l-spacing;
+    margin-bottom: $l-spacing;
 
     p {
       color: white;
     }
 
     .checkout-item {
-      margin-top: $l-spacing;
+      margin-top: $xl-spacing;
     }
 
     .total {
@@ -69,15 +70,14 @@
 
   .buy-now-btn {
     border: none;
-    padding: $xxs-spacing $xl-spacing;
-    margin-top: $l-spacing;
+    padding: $s-spacing $xl-spacing;
+    margin-bottom: $xxl-spacing;
     border-radius: 16px;
     font-weight: 600;
     transition: 300ms ease-in-out;
 
     .order-link {
-      text-decoration: none;
-      color: black;
+      @include link-style;
     }
   }
   .buy-now-btn:hover {

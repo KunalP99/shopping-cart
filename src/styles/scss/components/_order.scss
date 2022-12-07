@@ -1,0 +1,28 @@
+.order-container {
+  @include flex-center;
+  height: 100vh;
+  flex-direction: column;
+  gap: $md-spacing;
+
+  h1 {
+    @include header-style;
+    text-align: center;
+  }
+
+  .shop-link {
+    @include link-style;
+
+    button {
+      border: none;
+      background-color: black;
+      color: white;
+      padding: $s-spacing $xl-spacing;
+      border-radius: 16px;
+      font-size: 1rem;
+      transition: 300ms ease-in-out;
+    }
+    button:hover {
+      background-color: rgb(59, 59, 59);
+    }
+  }
+}

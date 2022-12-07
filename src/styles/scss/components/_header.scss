@@ -4,9 +4,7 @@ header {
   justify-content: space-between;
 
   h1 {
-    font-family: $header-font-style;
-    font-size: 2rem;
-    letter-spacing: 0.395em;
+    @include header-style;
   }
 
   .basket-container {
