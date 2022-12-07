@@ -48,6 +48,8 @@ export default function Sidebar(props) {
     // Only splice if the index does exist
     if (index > -1) {
       props.basket.splice(index, 1);
+
+      // This will update state, so that the component will re-render when remove button is clicked
       props.setBasket([...props.basket]);
     }
   };

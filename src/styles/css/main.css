@@ -162,6 +162,12 @@ header .basket-container p {
   font-weight: 400;
 }
 
+@media (min-width: 1500px) {
+  header {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
 .shop-container {
   display: flex;
   justify-content: center;
@@ -189,7 +195,7 @@ header .basket-container p {
 }
 .shop-container .card .price {
   margin-top: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-weight: 600;
 }
 .shop-container .card button {
@@ -201,6 +207,12 @@ header .basket-container p {
   width: 100%;
 }
 
+@media (min-width: 1500px) {
+  .shop-container {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
 .sidebar-container {
   position: fixed;
   right: 0;
@@ -259,4 +271,10 @@ header .basket-container p {
 
 .show {
   transform: translateX(0%);
+}
+
+@media (min-width: 930px) {
+  .sidebar-container {
+    width: 30%;
+  }
 }/*# sourceMappingURL=main.css.map */

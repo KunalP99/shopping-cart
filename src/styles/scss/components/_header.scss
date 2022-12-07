@@ -23,3 +23,10 @@ header {
     }
   }
 }
+
+@media (min-width: 1500px) {
+  header {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}

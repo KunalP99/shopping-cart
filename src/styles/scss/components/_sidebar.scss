@@ -66,3 +66,9 @@
 .show {
   transform: translateX(0%);
 }
+
+@media (min-width: 930px) {
+  .sidebar-container {
+    width: 30%;
+  }
+}

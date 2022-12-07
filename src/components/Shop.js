@@ -1,9 +1,22 @@
 import Header from "./Header";
 import items from "../data/items";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Shop() {
   const [basket, setBasket] = useState([]);
+
+  useEffect(() => {
+    const data = window.localStorage.getItem("HOODIE_BASKET");
+    if (data.length !== 0) {
+      setBasket(JSON.parse(data));
+      console.log(JSON.parse(data));
+    }
+    console.log("i fire once");
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("HOODIE_BASKET", JSON.stringify(basket));
+  }, [basket]);
 
   return (
     <div>
