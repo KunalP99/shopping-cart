@@ -37,7 +37,11 @@ export default function Header(props) {
         </button>
         <p>{typeof props.basket !== "undefined" ? `x${numOfItems}` : "x0"}</p>
       </div>
-      <Sidebar basket={props.basket} setBasket={props.setBasket} />
+      <Sidebar
+        basket={props.basket}
+        setBasket={props.setBasket}
+        setNumOfItems={setNumOfItems}
+      />
     </header>
   );
 }

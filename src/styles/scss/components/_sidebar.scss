@@ -52,6 +52,10 @@
       @include flex-center-vert;
       gap: 5px;
       margin-top: $s-spacing;
+
+      img {
+        cursor: pointer;
+      }
     }
 
     button {
@@ -59,7 +63,20 @@
       background-color: transparent;
       border: none;
       font-weight: 600;
+      margin-top: $s-spacing;
     }
+  }
+
+  .buy-now-btn {
+    border: none;
+    padding: $xxs-spacing $xl-spacing;
+    margin-top: $l-spacing;
+    border-radius: 16px;
+    transition: 300ms ease-in-out;
+    font-weight: 600;
+  }
+  .buy-now-btn:hover {
+    background-color: rgb(168, 168, 168);
   }
 }
 
@@ -67,8 +84,22 @@
   transform: translateX(0%);
 }
 
-@media (min-width: 930px) {
+@media (min-width: 1200px) {
   .sidebar-container {
     width: 30%;
+
+    .checkout-container {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .quantity-remove-container {
+      .quantity-container {
+        img {
+          width: 20px;
+        }
+      }
+    }
   }
 }

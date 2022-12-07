@@ -51,6 +51,11 @@ export default function Sidebar(props) {
 
       // This will update state, so that the component will re-render when remove button is clicked
       props.setBasket([...props.basket]);
+
+      // Sets the number of items in the header to 0 once the last item is removed from the basket
+      if (props.basket.length === 0) {
+        props.setNumOfItems(0);
+      }
     }
   };
 
@@ -116,6 +121,9 @@ export default function Sidebar(props) {
             : `Sub-total: £${total}`}
         </p>
       </div>
+      {props.basket.length > 0 && (
+        <button className='buy-now-btn'>Buy Now</button>
+      )}
     </div>
   );
 }

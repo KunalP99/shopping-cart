@@ -205,6 +205,10 @@ header .basket-container p {
   padding: 10px 0px;
   border-radius: 16px;
   width: 100%;
+  transition: 300ms ease-in-out;
+}
+.shop-container .card button:hover {
+  background-color: rgb(59, 59, 59);
 }
 
 @media (min-width: 1500px) {
@@ -262,19 +266,40 @@ header .basket-container p {
   gap: 5px;
   margin-top: 12px;
 }
+.sidebar-container .quantity-remove-container .quantity-container img {
+  cursor: pointer;
+}
 .sidebar-container .quantity-remove-container button {
   color: red;
   background-color: transparent;
   border: none;
   font-weight: 600;
+  margin-top: 12px;
+}
+.sidebar-container .buy-now-btn {
+  border: none;
+  padding: 4px 52px;
+  margin-top: 32px;
+  border-radius: 16px;
+  transition: 300ms ease-in-out;
+  font-weight: 600;
+}
+.sidebar-container .buy-now-btn:hover {
+  background-color: rgb(168, 168, 168);
 }
 
 .show {
   transform: translateX(0%);
 }
 
-@media (min-width: 930px) {
+@media (min-width: 1200px) {
   .sidebar-container {
     width: 30%;
+  }
+  .sidebar-container .checkout-container p {
+    font-size: 1.2rem;
+  }
+  .sidebar-container .quantity-remove-container .quantity-container img {
+    width: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -40,6 +40,11 @@
       padding: 10px 0px;
       border-radius: 16px;
       width: 100%;
+      transition: 300ms ease-in-out;
+    }
+
+    button:hover {
+      background-color: rgb(59, 59, 59);
     }
   }
 }
