@@ -5,6 +5,11 @@ import { useState, useEffect } from "react";
 export default function Shop() {
   const [basket, setBasket] = useState([]);
 
+  // Sets a key value pair where the value is the basket array and updates everytime basket updates
+  useEffect(() => {
+    localStorage.setItem("HOODIE_BASKET", JSON.stringify(basket));
+  }, [basket]);
+
   // Gets the value saved under the key name so when the page refreshes or the browser is closed, the basket array will be saved and that array will be set in state
   useEffect(() => {
     const data = window.localStorage.getItem("HOODIE_BASKET");
@@ -12,11 +17,6 @@ export default function Shop() {
       setBasket(JSON.parse(data));
     }
   }, []);
-
-  // Sets a key value pair where the value is the basket array and updates everytime basket updates
-  useEffect(() => {
-    localStorage.setItem("HOODIE_BASKET", JSON.stringify(basket));
-  }, [basket]);
 
   return (
     <div>
