@@ -5,3 +5,19 @@ button {
 p {
   font-family: $main-font-style;
 }
+
+.main-container {
+  height: 100vh;
+  @include flex-center;
+
+  button {
+    @include header-style;
+    font-size: 2rem;
+    border: none;
+    background: transparent;
+    transition: 700ms ease-in-out;
+  }
+  button:hover {
+    font-size: 2.5rem;
+  }
+}

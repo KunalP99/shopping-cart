@@ -138,6 +138,25 @@ p {
   font-family: "Barlow", sans-serif;
 }
 
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container button {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.395em;
+  font-size: 2rem;
+  border: none;
+  background: transparent;
+  transition: 700ms ease-in-out;
+}
+.main-container button:hover {
+  font-size: 2.5rem;
+}
+
 header {
   padding: 20px;
   display: flex;
@@ -215,6 +234,12 @@ header .basket-container p {
   .shop-container {
     margin-right: 100px;
     margin-left: 100px;
+  }
+  .shop-container .card {
+    width: 25%;
+  }
+  .shop-container .card p {
+    font-size: 1.1rem;
   }
 }
 .sidebar-container {

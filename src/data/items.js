@@ -28,7 +28,7 @@ const items = [
     quantity: 1,
   },
   {
-    name: "Actual co-ord oversized hoodie with athleisure back logo print",
+    name: "Actual co-ord oversized hoodie with athleisure back",
     price: 13.75,
     class: "item-5",
     id: 4,

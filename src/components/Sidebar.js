@@ -127,7 +127,7 @@ export default function Sidebar(props) {
             : `Sub-total: £${total}`}
         </p>
       </div>
-      {props.basket.length > 0 && (
+      {typeof props.basket !== "undefined" && props.basket.length > 0 && (
         <Link to='/order' className='order-link'>
           <button onClick={orderBtnClick} className='buy-now-btn'>
             Buy Now

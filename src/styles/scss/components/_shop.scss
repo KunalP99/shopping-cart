@@ -53,5 +53,12 @@
   .shop-container {
     margin-right: 100px;
     margin-left: 100px;
+
+    .card {
+      width: 25%;
+      p {
+        font-size: 1.1rem;
+      }
+    }
   }
 }
