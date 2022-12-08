@@ -4,7 +4,7 @@ import "./styles/css/main.css";
 function App() {
   return (
     <div className='main-container'>
-      <Link to='shop'>
+      <Link to='/shop'>
         <button>Shop Now</button>
       </Link>
     </div>
