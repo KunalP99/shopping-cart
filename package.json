@@ -20,6 +20,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,6 +42,8 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.7",
+    "cypress": "^12.0.2",
     "gh-pages": "^4.0.0"
   }
 }

@@ -80,7 +80,7 @@ export default function Sidebar(props) {
   }, [props.basket]);
 
   return (
-    <div className='sidebar-container'>
+    <div data-test-sidebar='sidebar' className='sidebar-container'>
       <img
         onClick={closeSidebar}
         className='close-icon'

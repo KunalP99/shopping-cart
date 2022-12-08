@@ -32,6 +32,7 @@ export default function Shop() {
               <p className='name'>{item.name}</p>
               <p className='price'>{`£${item.price}`}</p>
               <button
+                data-test-btn={`basket-btn-${item.id}`}
                 onClick={() => {
                   // If the item is not already in the basket, then add item else increment quantitiy of item
                   if (!basket.some((product) => product.id === item.id)) {

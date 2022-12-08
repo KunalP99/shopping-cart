@@ -33,7 +33,12 @@ export default function Header(props) {
       <h1>HOODIES</h1>
       <div className='basket-container'>
         <button>
-          <img onClick={showSidebar} src={Basket} alt='Basket' />
+          <img
+            data-test-basket={"basket"}
+            onClick={showSidebar}
+            src={Basket}
+            alt='Basket'
+          />
         </button>
         <p>{typeof props.basket !== "undefined" ? `x${numOfItems}` : "x0"}</p>
       </div>
