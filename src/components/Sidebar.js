@@ -105,12 +105,14 @@ export default function Sidebar(props) {
                 <div className='quantity-remove-container'>
                   <div className='quantity-container'>
                     <img
+                      data-test-minus={`minus-${item.id}`}
                       onClick={() => minusQuantity(item)}
                       src={Minus}
                       alt='Minus quantity'
                     />
                     <p>{item.quantity}</p>
                     <img
+                      data-test-plus={`plus-${item.id}`}
                       onClick={() => addQuantity(item)}
                       src={Plus}
                       alt='Add quantity'
@@ -129,7 +131,11 @@ export default function Sidebar(props) {
       </div>
       {typeof props.basket !== "undefined" && props.basket.length > 0 && (
         <Link to='/shopping-cart/order' className='order-link'>
-          <button onClick={orderBtnClick} className='buy-now-btn'>
+          <button
+            data-test-buy-btn={"buy-now-btn"}
+            onClick={orderBtnClick}
+            className='buy-now-btn'
+          >
             Buy Now
           </button>
         </Link>
