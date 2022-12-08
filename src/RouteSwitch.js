@@ -8,8 +8,8 @@ export default function RouteSwitch() {
     <BrowserRouter>
       <Routes>
         <Route path='/shopping-cart' element={<App />} />
-        <Route path='/shop' element={<Shop />} />
-        <Route path='/order' element={<Order />} />
+        <Route path='/shopping-cart/shop' element={<Shop />} />
+        <Route path='/shopping-cart/order' element={<Order />} />
       </Routes>
     </BrowserRouter>
   );

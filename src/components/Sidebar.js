@@ -128,7 +128,7 @@ export default function Sidebar(props) {
         </p>
       </div>
       {typeof props.basket !== "undefined" && props.basket.length > 0 && (
-        <Link to='/order' className='order-link'>
+        <Link to='/shopping-cart/order' className='order-link'>
           <button onClick={orderBtnClick} className='buy-now-btn'>
             Buy Now
           </button>
