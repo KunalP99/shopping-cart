@@ -118,7 +118,12 @@ export default function Sidebar(props) {
                       alt='Add quantity'
                     />
                   </div>
-                  <button onClick={() => removeItem(item)}>Remove</button>
+                  <button
+                    data-test-remove={`remove-${item.id}`}
+                    onClick={() => removeItem(item)}
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
             );

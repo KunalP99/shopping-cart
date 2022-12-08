@@ -47,7 +47,7 @@ describe("Sidebar component", () => {
     cy.get('[data-test-btn="basket-btn-1"]').click();
     cy.get('[data-test-btn="basket-btn-1"]').click();
     cy.get('[data-test-basket="basket"]').click();
-    cy.get('[data-test-minus="minus-1]').click();
+    cy.get('[data-test-minus="minus-1"]').click();
     cy.contains("£65");
   });
 
@@ -60,10 +60,34 @@ describe("Sidebar component", () => {
     cy.get('[data-test-btn="basket-btn-2"]').click();
     cy.get('[data-test-btn="basket-btn-2"]').click();
     cy.get('[data-test-basket="basket"]').click();
+
     cy.get('[data-test-minus="minus-1"]').click();
     cy.get('[data-test-minus="minus-1"]').click();
-    cy.get('[data-test-plus="minus-4"]').click();
-    cy.get('[data-test-plus="minus-4"]').click();
-    cy.contains("£252.5");
+    cy.get('[data-test-minus="minus-4"]').click();
+    cy.get('[data-test-minus="minus-4"]').click();
+    cy.contains("£238.75");
+  });
+
+  it("should remove item when the remove button is clicked", () => {
+    cy.get('[data-test-btn="basket-btn-0"]').click();
+    cy.get('[data-test-btn="basket-btn-1"]').click();
+    cy.get('[data-test-basket="basket"]').click();
+    cy.get('[data-test-remove="remove-0"]').click();
+
+    cy.contains("£65");
+  });
+
+  it("should close sidebar once the cross is clicked", () => {
+    cy.get('[data-test-basket="basket"]').click();
+    cy.get(".close-icon").click();
+    cy.contains("Sub-total").should("not.be.visible");
+  });
+
+  it("should direct user to the 'Order Successful' page when 'Buy Now' is clicked", () => {
+    cy.get('[data-test-btn="basket-btn-0"]').click();
+    cy.get('[data-test-basket="basket"]').click();
+    cy.contains("Buy Now").click();
+    cy.url().should("include", "/shopping-cart/order");
+    cy.contains("Order Successful");
   });
 });
