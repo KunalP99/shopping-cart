@@ -12,6 +12,7 @@ export default function Sidebar(props) {
     sidebar.classList.remove("show");
   };
 
+  // Increments quantity by 1 when clicking the + icon in the Sidebar
   const addQuantity = (item) => {
     props.setBasket(
       [...props.basket].map((object) => {
@@ -27,6 +28,7 @@ export default function Sidebar(props) {
     );
   };
 
+  // Decrements quantity by 1 when clicking the + icon in the Sidebar
   const minusQuantity = (item) => {
     props.setBasket(
       [...props.basket].map((object) => {
